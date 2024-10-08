@@ -1,6 +1,6 @@
 import axios from 'axios';
 const api = axios.create({
-  baseURL: 'http://localhost:5000',
+  baseURL: 'https://e-commerce-application-server.vercel.app/',
   headers: {
     'Authorization': `Bearer ${localStorage.getItem('token')}`, // Include token in all requests
   },
@@ -8,7 +8,7 @@ const api = axios.create({
  
 export const login = (credentials) => async (dispatch) => {
   try {
-    const res = await axios.post('http://localhost:5000/api/users/login', credentials);
+    const res = await axios.post('https://e-commerce-application-server.vercel.app/api/users/login', credentials);
     dispatch({ type: 'LOGIN_SUCCESS', payload: res.data });
     return Promise.resolve(); // Resolve promise on success
   } catch (error) {
@@ -20,7 +20,7 @@ export const login = (credentials) => async (dispatch) => {
 
 export const register = (userData) => async (dispatch) => {
   try {
-    const res = await axios.post('http://localhost:5000/api/users/register', userData);
+    const res = await axios.post('https://e-commerce-application-server.vercel.app/api/users/register', userData);
     dispatch({ type: 'REGISTER_SUCCESS', payload: res.data });
     return Promise.resolve();
   } catch (error) {
