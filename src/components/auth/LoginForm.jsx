@@ -9,7 +9,7 @@ const LoginForm = ({ onSubmit }) => {
 
   // Redirect to backend Google OAuth route
   const handleGoogleLogin = () => {
-    window.location.href = "http://localhost:5000/auth/google"; // Your backend Google login route
+    window.location.href = "https://printer-e-commerce.onrender.com/auth/google"; // Your backend Google login route
   };
 
   const handleChange = (e) => {
