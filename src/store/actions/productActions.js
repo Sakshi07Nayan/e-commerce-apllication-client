@@ -89,7 +89,7 @@ export const searchProducts = (searchTerm) => async (dispatch) => {
 export const fetchFeaturedProduct = () => async (dispatch) => {
   dispatch({ type: FETCH_FEATURED_PRODUCT_START });
   try {
-    const response = await axios.get('http://localhost:5000/api/products/featured');
+    const response = await axios.get('https://printer-e-commerce.onrender.com/api/products/featured');
     dispatch({ 
       type: FETCH_FEATURED_PRODUCT_SUCCESS, 
       payload: response.data 
