@@ -18,7 +18,7 @@ const ProductDetail = () => {
   console.log("UserId from props:", userId); // Check if userId is available
   const fetchProduct = async () => {
     try {
-      const response = await fetch(`https://e-commerce-application-server.vercel.app/api/products/${id}`);
+      const response = await fetch(`http://localhost:5000/api/products/${id}`);
       const data = await response.json();
       setProduct(data);
     } catch (error) {
